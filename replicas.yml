@@ -48,10 +48,10 @@ spec:
               port: 80
           resources:
             requests:
-              cpu: 200m
-              memory: 350Mi
+              cpu: "200m"
+              memory: "350Mi"
             limits:
-              cpu: 500m 
-              memory: 1000Mi
+              cpu: "500m"
+              memory: "1000Mi"
 
               
