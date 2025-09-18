@@ -35,11 +35,12 @@ spec:
                 ["echo hello my replica"]
           readnessProbe:
             port: 80
-          requests:
-            cpu: 200M
-            memory: 350mi
-          limits:
-            cpu: 350M 
-            memory: 500mi
+          ResourceRequirements:
+            requests:
+              cpu: 200M
+              memory: 350mi
+            limits:
+              cpu: 350M 
+              memory: 500mi
 
               
