@@ -16,7 +16,7 @@ spec:
       app: rep-cont-match
   template:
     metadata:
-      name: cont-define
+      # name: cont-define because Usually we don’t set name in Pod template, because ReplicaSet generates multiple Pods (they need unique names).
       labels:
         app: rep-cont-match
     spec:
@@ -31,9 +31,17 @@ spec:
               path: /
               port: 80
           livenessProbe:
-            exec:
-              command:
-                ["echo hello my replica"]
+#             livenessProbe.exec with ["echo hello my replica"] → this will always succeed (echo returns 0). So it doesn’t actually check container health.
+
+# Usually, liveness probe should test the app (e.g. HTTP GET /health).
+
+# Readiness + Startup probes are fine.
+            # exec:
+            #   command:
+            #     ["echo hello my replica"]
+            httpGet:
+              path: /
+              port: 80
           readinessProbe:
             httpGet:
               path: /
