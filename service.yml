@@ -11,4 +11,4 @@ spec:
     name: port-define
     port: 80
     protocol: TCP
-    targetport: 4444
+    # targetport: 4444
