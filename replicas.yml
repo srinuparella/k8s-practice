@@ -22,7 +22,8 @@ spec:
     spec:
       containers:
         - name: my-containers
-          image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/cssi:latest
+          #image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/cssi:latest
+          image: rajgandhi123/css-repo:glass
           ports:
             - containerPort: 80
               protocol: TCP
