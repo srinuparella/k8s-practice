@@ -34,8 +34,9 @@ spec:
               command:
                 ["echo hello my replica"]
           readinessProbe:
-            port: 80
-          Resources:
+            httpGet:
+              port: 80
+          resources:
             requests:
               cpu: 200M
               memory: 350mi
