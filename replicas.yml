@@ -32,7 +32,7 @@ spec:
           livenessProbe:
             exec:
               command:
-                "echo hello my replica"
+                ["echo hello my replica"]
           readnessProbe:
             port: 80
           requests:
