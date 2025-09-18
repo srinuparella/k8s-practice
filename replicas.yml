@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Replicas
+metadata:
+  name: resource-spec
+  labels:
+    app: rapido-application
+    env: uat
+  namespace: Testing
+  annotations: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/repli-repo
+spec:
+  minReadySeconds: 6
+  replicas: 4
+  selector:
+    matchLabels:
+      app: rep-cont-match
+  template:
+    metadata:
+      name: cont-define
+      labels:
+        app: rep-cont-match
+    spec:
+      containers:
+        - name: my-containers
+          image: srinuparella/stp
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          startupProbe:
+            httpGet:
+              path: /
+          livenessProbe:
+            exec:
+              command:
+                echo hello my replica
+          readnessProbe:
+            port: 80
+          requests:
+            cpu: 200M
+            memory: 350mi
+          limits:
+            cpu: 350M 
+            memory: 500mi
+
+              
