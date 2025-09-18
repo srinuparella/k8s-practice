@@ -33,9 +33,9 @@ spec:
             exec:
               command:
                 ["echo hello my replica"]
-          readnessProbe:
+          readinessProbe:
             port: 80
-          ResourceRequirements:
+          Resources:
             requests:
               cpu: 200M
               memory: 350mi
