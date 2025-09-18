@@ -2,8 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-name
-  lables:
+  labels:
     app: rapido-application
+  namespace: testing
 spec:
   selector: 
     type: LoadBalancer
