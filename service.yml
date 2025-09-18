@@ -8,7 +8,7 @@ spec:
   selector: 
     type: LoadBalancer
   ports:
-    name: port-define
-    port: 80
-    protocol: TCP
+    - name: port-define
+      port: 80
+      protocol: TCP
     # targetport: 4444

@@ -6,7 +6,8 @@ metadata:
     app: rapido-application
     env: uat
   namespace: testing
-  annotations: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/repli-repo
+  annotations: 
+    repo: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/repli-repo
 spec:
   minReadySeconds: 6
   replicas: 4
