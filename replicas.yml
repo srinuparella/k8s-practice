@@ -29,19 +29,21 @@ spec:
           startupProbe:
             httpGet:
               path: /
+              port: 80
           livenessProbe:
             exec:
               command:
                 ["echo hello my replica"]
           readinessProbe:
             httpGet:
+              path: /
               port: 80
           resources:
             requests:
-              cpu: 200M
-              memory: 350mi
+              cpu: 200m
+              memory: 350Mi
             limits:
-              cpu: 350M 
-              memory: 500mi
+              cpu: 500m 
+              memory: 1000Mi
 
               
