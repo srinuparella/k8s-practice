@@ -7,7 +7,7 @@ metadata:
     env: uat
   namespace: testing
   annotations: 
-    repo: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/csstemp
+    repo: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/css
 spec:
   minReadySeconds: 6
   replicas: 4
@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: my-containers
-          image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/csstemp:1.10
+          image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/css:latest
           ports:
             - containerPort: 80
               protocol: TCP
