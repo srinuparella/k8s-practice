@@ -7,9 +7,11 @@ metadata:
   namespace: testing
 spec:
   selector: 
-    type: LoadBalancer
+    app: rapido-application   # This must match your Pod/Deployment labels
+  type: LoadBalancer
   ports:
     - name: port-define
       port: 80
       protocol: TCP
-    # targetport: 4444
+      targetport: 80
+
