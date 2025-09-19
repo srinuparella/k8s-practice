@@ -44,11 +44,12 @@ spec:
             exec:
               command:
                 - echo hello my replica
-          readnessProbe:
+          readinessProbe:
             port: 80
-          requests:
-            cpu: 200M
-            memory: 350mi
-          limits:
-            cpu: 450M 
-            memory: 1000mi
+          resources:
+            requests:
+              cpu: 200M
+              memory: 350mi
+            limits:
+              cpu: 450M 
+              memory: 1000mi
