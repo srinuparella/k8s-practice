@@ -10,7 +10,7 @@ spec:
   minReadySeconds: 5
   replicas: 3
   selector:
-    matchExpressions:
+    matchExpressions: 
       - key: web
         operator: In
         values: 
@@ -41,17 +41,19 @@ spec:
             httpGet:
               path: /
           livenessProbe:
-            exec:
-              command:
-                - echo hello my replica
+            httpGet:
+              path: /
+              port: 80
           readinessProbe:
-            port: 80
+            httpGet:
+              path: /
+              port: 80
           resources:
             requests:
-              cpu: 200m
-              memory: 350Mi
+              cpu: "200m"
+              memory: "350Mi"
             limits:
-              cpu: 500m 
-              memory: 1000mi
+              cpu: "500m" 
+              memory: "1000mi"
 
 
