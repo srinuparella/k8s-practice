@@ -13,3 +13,4 @@ spec:
       protocol: TCP
       targetPort: 80
 
+# whenever we communicate with pods dont mentinos replica lables ini service file just call with under template lebel pod \s level lales in service file lables in that moment our appliaion is running
