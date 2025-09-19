@@ -13,14 +13,16 @@ spec:
     matchExpressions:
       - key: web
         operator: In
-        values: webExpre
+        values: 
+          - webExpre
       - key: dev
         operator: NotIn
-        values: devExpre
+        values: 
+          - devExpre
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 3
+      maxSurge: 1
       maxUnavailable: 1
   template:
     metadata:
