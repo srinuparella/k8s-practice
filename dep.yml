@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: dep-cont
-          image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/cssi:latest
+          image: 934545598565.dkr.ecr.ap-south-1.amazonaws.com/cssi:new
           ports:
             - containerPort: 80
               protocol: TCP
